@@ -223,6 +223,10 @@ box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
 .item__news > *{
 	flex: 1;
 }
+.special__content{
+	height: 100%;
+	width: 100%;
+}
 .content__item{
 	display: flex;
 	flex-direction: column;
@@ -265,10 +269,30 @@ box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
 	display: none;
 }
 .item__news{
-	height: 0;
 	visibility: hidden;
+	height: 0;
+	transform-origin: top;
+	transform: scaleY(0);
+	transition: all 0s ease, transform .3s ease;
 }
 .tabs__input:checked + .item__news{
-	height: auto;
 	visibility: visible;
+	transform: scaleY(1);
+	height: auto;
+}
+.special__header{
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.special__header_btn{
+	padding: 0;
+	flex: 1;
+}
+.special__header_label{
+	/*padding: .5% 1.5%;*/
+	height: 100%;
+	width: 100%;
+	display: block;
+	margin: 1% 3%;
 }
