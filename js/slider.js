@@ -8,14 +8,6 @@ const toRight = document.querySelector('.right');
 var t = setInterval(Righting, 6000);
 var counter = 0;
 
-// toRight.forEach(b => b.addEventListener('click', () => {
-// 	clearInterval(t);
-// 	Righting();
-// }));
-// toLeft.forEach(q => q.addEventListener('click', () => {
-// 	clearInterval(t);
-// 	Lefting();
-// }));
 toRight.addEventListener('click', () => {
 	clearInterval(t);
 	Righting();

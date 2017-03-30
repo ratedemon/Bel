@@ -3,6 +3,7 @@
 <head>
 	<title>Provoda.by</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style/bootstrap.css">
 	<link rel="stylesheet" href="style/bootstrap-theme.css">
 	<link rel="stylesheet" href="style/normalize.css">
@@ -13,16 +14,16 @@
 </head>
 <body>
 <div class="container-fluid">
-	<div class="header row">
-		<div class="header__logo col-xs-12 col-md-5">Provoda.by</div>
-		<div class="header__contacts col-xs-12 col-md-2">
+	<header class="header row">
+		<div class="header__logo col-xs-12 col-sm-5 col-md-5"><a href="#" class="header__logo_link">Provoda.by</a></div>
+		<div class="header__contacts col-xs-12 col-sm-2 col-md-2">
 			<span class="contact__phone">+375(29)555-11-88</span>
 			<span class="contact__phone">+375(29)555-11-88</span>
 		</div>
-		<div class="header__call col-xs-12 col-md-2">
+		<div class="header__call col-xs-12 col-sm-5 col-md-2">
 			<button class="btn btn-default call__auto" type="button">Перезвоните мне</button>
 		</div>
-		<div class="header__basket col-xs-12 col-md-3">
+		<div class="header__basket col-xs-12 col-sm-2 col-md-3">
 			<button type="button" class="basket__inside btn btn-default">
 				<div class="inside__pic">
 				<img src="img/basket.png" alt="" class="inside__pic_img">
@@ -31,10 +32,10 @@
 				<span class="inside__items">товаров<br>в корзине</span>
 			</button>
 		</div>
-	</div>
+	</header>
 
 	<nav class="nav row">
-		<div class="nav__menu col-xs-12 col-md-12">
+		<div class="nav__menu col-xs-12 col-sm-12 col-md-12">
 			<a href="#" class="menu__item">Главная</a>
 			<a href="#" class="menu__item menu__item_active">Каталог</a>
 			<a href="#" class="menu__item">О нас</a>
@@ -43,7 +44,7 @@
 	</nav>
 	
 	<div class="slider row">
-		<div class="slider__block col-xs-12 col-md-12">
+		<div class="slider__block col-xs-12 col-sm-12 col-md-12">
 		<button class="left carousel-control">
 			    <span class="glyphicon glyphicon-chevron-left"></span>
 			  	</button>
@@ -72,7 +73,8 @@
 	</div>
 
 	<main class="main row">
-		<div class="main__category col-xs-12 col-md-3">
+		<div class="main__category col-xs-12 col-sm-3 col-md-3">
+			<button type="button" class="main__btn">Меню каталогов</button>
 			<ul class="category__list">
 				<li class="list__item"><a href="#" class="list__item_link">Раздел католога</a></li>
 				<li class="list__item"><a href="#" class="list__item_link">Раздел католога</a></li>
@@ -88,102 +90,214 @@
 				<li class="list__item"><a href="#" class="list__item_link">Раздел католога</a></li>
 			</ul>
 		</div>
-		<div class="main__products col-xs-12 col-md-9">
+		<div class="main__products col-xs-12 col-sm-9 col-md-9">
 			<div class="products__special">
 				<div class="special__header">
-					<button class="special__header_btn btn btn-default"><label for="newest" class="special__header_label">Новинки</label></button>
-					<button class="special__header_btn btn btn-default"><label for="hits" class="special__header_label">Хиты продаж</label></button>
-					<button class="special__header_btn btn btn-default"><label for="sales" class="special__header_label">Товары на скидках</label></button>
-				</div>
-				<div class="special__content">
 					<input type="radio" class="tabs__input" id="newest" name="special" checked>
-					<div class="item__news">
-						<div class="content__item">
-							<img src="img/item.png" alt="" class="item__pic">
-							<h2 class="item__name"><a href="#" class="item__name_link">Название товара1</a></h2>
-							<span class="item__description">Название товара</span>
-							<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+					<input type="radio" class="tabs__input" id="hits" name="special">
+					<input type="radio" class="tabs__input" id="sales" name="special">
+					<div class="special__header_labels">
+						<label for="newest" class="special__header_label special__header_label-news">Новинки</label>
+						<label for="hits" class="special__header_label special__header_label-hit">Хиты продаж</label>
+						<label for="sales" class="special__header_label special__header_label-sale">Товары на скидках</label>
+					</div>
+
+					<div class="special__offers">
+						<div class="item__news" id="news">
+							<div class="content__item">
+								<img src="img/item.png" alt="" class="item__pic">
+								<h2 class="item__name"><a href="#" class="item__name_link">Название товара1</a></h2>
+								<span class="item__description">Название товара</span>
+								<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+							</div>
+							<div class="content__item">
+								<img src="img/item.png" alt="" class="item__pic">
+								<h2 class="item__name"><a href="#" class="item__name_link">Название товара1</a></h2>
+								<span class="item__description">Название товара</span>
+								<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+							</div>
+							<div class="content__item">
+								<img src="img/item.png" alt="" class="item__pic">
+								<h2 class="item__name"><a href="#" class="item__name_link">Название товара1</a></h2>
+								<span class="item__description">Название товара</span>
+								<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+							</div>
+							<div class="content__item">
+								<img src="img/item.png" alt="" class="item__pic">
+								<h2 class="item__name"><a href="#" class="item__name_link">Название товара1</a></h2>
+								<span class="item__description">Название товара</span>
+								<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+							</div>
 						</div>
-						<div class="content__item">
-							<img src="img/item.png" alt="" class="item__pic">
-							<h2 class="item__name"><a href="#" class="item__name_link">Название товара1</a></h2>
-							<span class="item__description">Название товара</span>
-							<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+						
+						
+						<div class="item__news" id="hit">
+							<div class="content__item">
+								<img src="img/item.png" alt="" class="item__pic">
+								<h2 class="item__name"><a href="#" class="item__name_link">Название товара2</a></h2>
+								<span class="item__description">Название товара</span>
+								<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+							</div>
+							<div class="content__item">
+								<img src="img/item.png" alt="" class="item__pic">
+								<h2 class="item__name"><a href="#" class="item__name_link">Название товара2</a></h2>
+								<span class="item__description">Название товара</span>
+								<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+							</div>
+							<div class="content__item">
+								<img src="img/item.png" alt="" class="item__pic">
+								<h2 class="item__name"><a href="#" class="item__name_link">Название товара2</a></h2>
+								<span class="item__description">Название товара</span>
+								<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+							</div>
+							<div class="content__item">
+								<img src="img/item.png" alt="" class="item__pic">
+								<h2 class="item__name"><a href="#" class="item__name_link">Название товара2</a></h2>
+								<span class="item__description">Название товара</span>
+								<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+							</div>
 						</div>
-						<div class="content__item">
-							<img src="img/item.png" alt="" class="item__pic">
-							<h2 class="item__name"><a href="#" class="item__name_link">Название товара1</a></h2>
-							<span class="item__description">Название товара</span>
-							<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
-						</div>
-						<div class="content__item">
-							<img src="img/item.png" alt="" class="item__pic">
-							<h2 class="item__name"><a href="#" class="item__name_link">Название товара1</a></h2>
-							<span class="item__description">Название товара</span>
-							<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+
+						<div class="item__news" id="sale">
+							<div class="content__item">
+								<img src="img/item.png" alt="" class="item__pic">
+								<h2 class="item__name"><a href="#" class="item__name_link">Название товара3</a></h2>
+								<span class="item__description">Название товара</span>
+								<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+							</div>
+							<div class="content__item">
+								<img src="img/item.png" alt="" class="item__pic">
+								<h2 class="item__name"><a href="#" class="item__name_link">Название товара3</a></h2>
+								<span class="item__description">Название товара</span>
+								<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+							</div>
+							<div class="content__item">
+								<img src="img/item.png" alt="" class="item__pic">
+								<h2 class="item__name"><a href="#" class="item__name_link">Название товара3</a></h2>
+								<span class="item__description">Название товара</span>
+								<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+							</div>
+							<div class="content__item">
+								<img src="img/item.png" alt="" class="item__pic">
+								<h2 class="item__name"><a href="#" class="item__name_link">Название товара3</a></h2>
+								<span class="item__description">Название товара</span>
+								<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+							</div>
 						</div>
 					</div>
-					
-					<input type="radio" class="tabs__input" id="hits" name="special">
-					<div class="item__news">
-						<div class="content__item">
-							<img src="img/item.png" alt="" class="item__pic">
-							<h2 class="item__name"><a href="#" class="item__name_link">Название товара2</a></h2>
-							<span class="item__description">Название товара</span>
-							<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
-						</div>
-						<div class="content__item">
-							<img src="img/item.png" alt="" class="item__pic">
-							<h2 class="item__name"><a href="#" class="item__name_link">Название товара2</a></h2>
-							<span class="item__description">Название товара</span>
-							<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
-						</div>
-						<div class="content__item">
-							<img src="img/item.png" alt="" class="item__pic">
-							<h2 class="item__name"><a href="#" class="item__name_link">Название товара2</a></h2>
-							<span class="item__description">Название товара</span>
-							<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
-						</div>
-						<div class="content__item">
-							<img src="img/item.png" alt="" class="item__pic">
-							<h2 class="item__name"><a href="#" class="item__name_link">Название товара2</a></h2>
-							<span class="item__description">Название товара</span>
-							<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+				</div>
+			</div>
+			<div class="products__catalog">
+				<div class="catalog__name">
+					<h3 class="catalog__name_title">Каталог</h3>
+				</div>
+				<div class="catalog__themes">
+
+					<div class="themes__item">
+						<div class="item__block">
+							<img src="img/catalog.png" alt="" class="item__logo">
+							<a href="#" class="item__link">Кабель, провод</a>
 						</div>
 					</div>
 
-					<input type="radio" class="tabs__input" id="sales" name="special">
-					<div class="item__news">
-						<div class="content__item">
-							<img src="img/item.png" alt="" class="item__pic">
-							<h2 class="item__name"><a href="#" class="item__name_link">Название товара3</a></h2>
-							<span class="item__description">Название товара</span>
-							<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
-						</div>
-						<div class="content__item">
-							<img src="img/item.png" alt="" class="item__pic">
-							<h2 class="item__name"><a href="#" class="item__name_link">Название товара3</a></h2>
-							<span class="item__description">Название товара</span>
-							<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
-						</div>
-						<div class="content__item">
-							<img src="img/item.png" alt="" class="item__pic">
-							<h2 class="item__name"><a href="#" class="item__name_link">Название товара3</a></h2>
-							<span class="item__description">Название товара</span>
-							<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
-						</div>
-						<div class="content__item">
-							<img src="img/item.png" alt="" class="item__pic">
-							<h2 class="item__name"><a href="#" class="item__name_link">Название товара3</a></h2>
-							<span class="item__description">Название товара</span>
-							<button  type="button" class="btn btn-default item__btn">Добавить в сравнение</button>
+					<div class="themes__item">
+						<div class="item__block">
+							<img src="img/catalog.png" alt="" class="item__logo">
+							<a href="#" class="item__link">Модульная автоматика</a>
 						</div>
 					</div>
+
+					<div class="themes__item">
+						<div class="item__block">
+							<img src="img/catalog.png" alt="" class="item__logo">
+							<a href="#" class="item__link">Корпуса электрощитков</a>
+						</div>
+					</div>
+
+					<div class="themes__item">
+						<div class="item__block">
+							<img src="img/catalog.png" alt="" class="item__logo">
+							<a href="#" class="item__link">Электроустановочные изделия</a>
+						</div>
+					</div>
+
+					<div class="themes__item">
+						<div class="item__block">
+							<img src="img/catalog.png" alt="" class="item__logo">
+							<a href="#" class="item__link">Кабеленесущие системы</a>
+						</div>
+					</div>
+
+					<div class="themes__item">
+						<div class="item__block">
+							<img src="img/catalog.png" alt="" class="item__logo">
+							<a href="#" class="item__link">Апаратура измерения</a>
+						</div>
+					</div>
+
+					<div class="themes__item">
+						<div class="item__block">
+							<img src="img/catalog.png" alt="" class="item__logo">
+							<a href="#" class="item__link">Светильники</a>
+						</div>
+					</div>
+
+					<div class="themes__item">
+						<div class="item__block">
+							<img src="img/catalog.png" alt="" class="item__logo">
+							<a href="#" class="item__link">Лампочки</a>
+						</div>
+					</div>
+
+					<div class="themes__item">
+						<div class="item__block">
+							<img src="img/catalog.png" alt="" class="item__logo">
+							<a href="#" class="item__link">Розетки</a>
+						</div>
+					</div>
+
+					<div class="themes__item">
+						<div class="item__block">
+							<img src="img/catalog.png" alt="" class="item__logo">
+							<a href="#" class="item__link">Лента светодиодная и профиль</a>
+						</div>
+					</div>
+
+					<div class="themes__item">
+						<div class="item__block">
+							<img src="img/catalog.png" alt="" class="item__logo">
+							<a href="#" class="item__link">Тёплые полы и аксессуары</a>
+						</div>
+					</div>
+
+					<div class="themes__item">
+						<div class="item__block">
+							<img src="img/catalog.png" alt="" class="item__logo">
+							<a href="#" class="item__link">Стабилизаторы</a>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
 	</main>
 
+
+	<footer class="footer row">
+		<div class="footer__company col-xs-12 col-sm-3 col-md-3">
+			<span class="footer__company_short">&#169; provoda.by, 2017</span>
+		</div>
+		<div class="footer__nav nav__menu col-xs-12 col-sm-4 col-md-4">
+			<a href="#" class="menu__item">Главная</a>
+			<a href="#" class="menu__item">Каталог</a>
+			<a href="#" class="menu__item">О нас</a>
+			<a href="#" class="menu__item">Контакты</a>
+		</div>
+		<div class="footer__info col-xs-12 col-sm-5 col-md-5">
+			<span class="contact__phone info__phone">+375(29)555-11-88, +375(29)555-11-88,</span>
+			<span class="contacts__location">«Червенский рынок», г. Минск, ул. Маяковского 184<br>ряд В6, место 27</span>
+		</div>
+	</footer>
 </div>
 </body>
 </html>
