@@ -1,7 +1,6 @@
 const polosa = document.querySelector('.slider__polosa');
 const slide = document.querySelectorAll('.polosa__slide');
 
-console.log(polosa, slide)
 const toLeft = document.querySelector('.left');
 const toRight = document.querySelector('.right');
 
@@ -29,9 +28,10 @@ function Righting() {
 function Lefting() {
 	counter--;
 	if(counter<0){
-		counter=slide.lenght - 1;
+		counter = slide.length-1;
 	}
 	else{
+		
 	}
 	polosa.style.transform = 'translateX(' + -100*counter +'%)';
 }
